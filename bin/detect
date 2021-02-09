@@ -2,9 +2,7 @@
 
 # If there is no .heroku/run.sh, then don't apply this buildpack
 # [[ ! -f "$1/.heroku/run.sh" ]] &&  exit 1
-if [ ! -f "$1/.heroku/run.sh" ]; then
-  echo $1
-  echo $(pwd)
+if [ ! -f "$1/.scripts/run.sh" ]; then
   exit 1
 fi
 
